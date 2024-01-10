@@ -9,7 +9,7 @@ img {
   height: auto;
 }
 /* padding sider */
-main {
+.margin_indhold {
   margin: 0 10%;
 }
 
@@ -299,6 +299,7 @@ nav {
   .grid_3-1 {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    padding-right: 3%;
   }
   .hero_txt {
     display: grid;
