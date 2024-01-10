@@ -1,3 +1,4 @@
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,6 +8,12 @@ img {
   width: 100%;
   height: auto;
 }
+/* padding sider */
+main {
+  margin: 0 10px;
+}
+
+/* Baggrundsfarver */
 body {
   background-color: #e9e5e0;
 }
@@ -14,11 +21,9 @@ footer {
   background-color: #412e55;
 }
 
-main {
-  margin: 0 10px;
-}
-
 /******* Styling af fonte *********/
+
+/* h1 og h2 font, mobile version */
 @font-face {
   font-family: "Margaret";
   src: url("webfontkit-20240107-102758/margaret-webfont.woff2") format("woff2");
@@ -35,7 +40,19 @@ h2 {
   font-size: 35px;
   color: #412e55;
 }
+/* h1 og h2 font, desk version */
+@media (min-width: 800px) {
+  h1 {
+    font-family: "Margaret";
+    font-size: 140px;
+  }
+  h2 {
+    font-family: "Margaret";
+    font-size: 58px;
+  }
+}
 
+/* h3, h4, h5 og h6 styling*/
 h3 {
   font-family: "Raleway", sans-serif;
   font-size: 40px;
@@ -62,6 +79,28 @@ h6 {
   font-weight: 500;
 }
 
+/* h3, h4, h5 og h6 mobile version*/
+@media (max-width: 800px) {
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: center;
+    padding-top: 5%;
+  }
+}
+
+/* h3, h4, h5 og h6 desk version*/
+@media (min-width: 800px) {
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 0px 0px 14px 22.5px;
+  }
+}
+
+/* Brødtekst */
 p {
   font-family: Helvetica, sans-serif;
   font-size: 12px;
@@ -69,6 +108,22 @@ p {
   line-height: 20px;
 }
 
+/* Brødtekst, mobile version */
+@media (max-width: 800px) {
+  .mobile_p {
+    padding-bottom: 5%;
+  }
+}
+
+/* Brødtekst, deskversion placement */
+@media (min-width: 800px) {
+  p {
+    padding: 0px 0px 14px 22.5px;
+    hyphens: auto;
+  }
+}
+
+/* list styling */
 li {
   font-family: "Raleway", sans-serif;
   font-size: 12px;
@@ -79,10 +134,14 @@ li:hover {
   text-decoration: underline;
   color: #412e55;
 }
+
+/* current page link styling */
 .current {
   text-decoration: underline;
   color: #412e55;
 }
+
+/* hyperlink styling */
 a {
   font-family: "Raleway", sans-serif;
   font-size: 12px;
@@ -95,46 +154,22 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Fonte mobile version */
-@media (max-width: 800px) {
-  h3,
-  h4,
-  h5,
-  h6 {
-    text-align: center;
-    padding-top: 5%;
-  }
-  .mobile_p {
-    padding-bottom: 5%;
-  }
+/* Font i footer styling */
+.a_footer {
+  color: #e9e5e0;
+  text-decoration: none;
 }
 
-/* Deskversion */
-@media (min-width: 800px) {
-  h1 {
-    font-family: "Margaret";
-    font-size: 140px;
-    color: #412e55;
-    letter-spacing: 4px;
-  }
-  h2 {
-    font-family: "Margaret";
-    font-size: 58px;
-    color: #412e55;
-  }
-  p {
-    padding: 0px 0px 14px 22.5px;
-    hyphens: auto;
-  }
-  h3,
-  h4,
-  h5,
-  h6 {
-    padding: 0px 0px 14px 22.5px;
-  }
+.current_footer,
+.current_footer:hover,
+.a_footer:hover {
+  color: #e9e5e0;
+  text-decoration: underline;
 }
 
-/******* Menu til desktop og burgermenu *********/
+/******* Menu til desktop og burgermenu, fra tema 3 *********/
+
+/* header styling, flex */
 header {
   display: flex;
   justify-content: space-between;
@@ -147,11 +182,13 @@ header {
   width: 10%;
 }
 
+/* navigation, placering*/
 nav {
   display: flex;
   align-items: center;
 }
 
+/* menu, padding + gap */
 .menu {
   display: flex;
   list-style: none;
@@ -160,17 +197,21 @@ nav {
   gap: 45px;
 }
 
+/* menu list margin */
 .menu li {
   margin-right: 20px;
 }
+
 .menu_icon {
   width: 40%;
 }
 
+/* menu sidste li element */
 .menu li:last-child {
   margin-right: 0;
 }
 
+/* menu hyperlink styling */
 .menu a {
   display: block;
   padding: 10px;
@@ -185,12 +226,14 @@ nav {
   text-decoration: underline;
 }
 
+/* Burgermenu, styling */
 .burger {
   width: 30px;
   height: 20px;
   cursor: pointer;
 }
 
+/* Burgermenu streger, styling */
 .burger .line {
   width: 100%;
   height: 2px;
@@ -198,9 +241,13 @@ nav {
   margin-bottom: 5px;
   transition: 0.2s linear;
 }
+
+/* Burgermenu, % vises */
 .burger {
   display: none;
 }
+
+/* Burgermenu, styling + line animation, mobile version */
 @media screen and (max-width: 800px) {
   .menu {
     display: none;
@@ -244,27 +291,7 @@ nav {
   }
 }
 
-/* Font i footer */
-.a_footer {
-  color: #e9e5e0;
-  text-decoration: none;
-}
-
-.current_footer,
-.current_footer:hover,
-.a_footer:hover {
-  color: #e9e5e0;
-  text-decoration: underline;
-}
-
 /****************** Forside *******************/
-
-/* Hero mobile version */
-@media (max-width: 800px) {
-  .hero_txt {
-    text-align: center;
-  }
-}
 
 /* Hero desk version */
 @media (min-width: 800px) {
@@ -280,16 +307,65 @@ nav {
   }
 }
 
-/* Projekter, h3 center */
+/* Projekter, h3 center + top og bund */
 .txt_center {
   text-align: center;
   padding: 10% 0% 5% 0%;
 }
 
-/* Projekter, mobile version */
+/* projekt, grid + byt plads, desk version*/
+@media (min-width: 800px) {
+  .grid_1-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 10%;
+  }
+  .grid_2-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 10%;
+  }
+  .text_column1 {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    place-content: center;
+  }
+  .text_column2 {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    place-content: center;
+  }
+}
+
+/* projekt tekst placering på resten, desk version */
+@media (min-width: 800px) {
+  .text {
+    display: grid;
+    text-align: center;
+    place-content: center;
+  }
+}
+
+/* Projekter img, mobile version */
 @media (max-width: 800px) {
   .tema_img {
     padding-top: 15%;
+  }
+}
+
+/* Projekter img, desk version */
+@media (min-width: 800px) {
+  .tema_img {
+    margin: 2%;
+    width: 85%;
+  }
+  .tema_img:hover {
+    opacity: 55%;
+    cursor: pointer;
   }
 }
 
@@ -300,8 +376,12 @@ nav {
   }
 }
 
-/* Om sektion, desk version*/
+/* Om sektion, grid + placering desk version*/
 @media (min-width: 800px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   .om_txt {
     display: grid;
     grid-column: 1;
@@ -318,52 +398,7 @@ nav {
   }
 }
 
-@media (min-width: 800px) {
-  .text {
-    display: grid;
-    text-align: center;
-    place-content: center;
-  }
-
-  .text_column1 {
-    display: grid;
-    grid-column: 1;
-    grid-row: 1;
-    text-align: center;
-    place-content: center;
-  }
-  .text_column2 {
-    display: grid;
-    grid-column: 1;
-    grid-row: 1;
-    text-align: center;
-    place-content: center;
-  }
-  .grid_1-2 {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    margin-bottom: 10%;
-  }
-  .grid_2-1 {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    margin-bottom: 10%;
-  }
-  .tema_img {
-    margin: 2%;
-    width: 85%;
-  }
-  .tema_img:hover {
-    opacity: 55%;
-    cursor: pointer;
-  }
-  .grid_1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* Button */
+/* Button styling + animation */
 .container {
   display: flex;
   justify-content: center;
@@ -402,7 +437,7 @@ nav {
 
 /****************** Om mig *******************/
 
-/* Om tekst */
+/* Om tekst, mobile + desk version*/
 .paragraph {
   margin-bottom: 4%;
 }
@@ -412,7 +447,7 @@ nav {
   }
 }
 
-/* Kompetencer afsnit, mobile version */
+/* Kompetencer afsnit, padding, mobile version */
 @media (max-width: 800px) {
   .column_2 {
     padding: 8% 0;
@@ -422,7 +457,7 @@ nav {
   }
 }
 
-/* Kompetencer afsnit, desk version */
+/* Kompetencer afsnit, grid + placering desk version */
 @media (min-width: 800px) {
   .grid_1-1-1-1 {
     display: grid;
@@ -441,14 +476,14 @@ nav {
   }
 }
 
-/* Uddannelse afsnit, mobile version */
+/* Uddannelse afsnit, padding, mobile version */
 @media (max-width: 800px) {
   .cv_txt {
     padding-bottom: 5%;
   }
 }
 
-/* Uddannelse afsnit, desk version */
+/* Uddannelse afsnit, grid + placering + mindre font, desk version */
 @media (min-width: 800px) {
   .grid_1-1-1 {
     display: grid;
@@ -465,14 +500,14 @@ nav {
   }
 }
 
-/* Fritidsinteresser afsnit */
+/* Fritidsinteresser afsnit, padding, desk version */
 @media (min-width: 800px) {
   .fritid_txt {
     padding-right: 66%;
   }
 }
 
-/* galleri */
+/* galleri, grid + placering, desk version */
 @media (min-width: 800px) {
   .grid_galleri {
     display: grid;
@@ -522,43 +557,13 @@ nav {
 }
 
 /****************** Undersider *******************/
+/* crosslinkis*/
 .genveje {
   font-size: 10px;
 }
 
-/* Tema indhold, mobile version*/
-@media (max-width: 800px) {
-  .p_padding {
-    padding-bottom: 8%;
-  }
-  .program_indhold {
-    padding-top: 5%;
-  }
-}
-
-/* Tema indhold, desk version*/
-@media (min-width: 800px) {
-  .p_padding_om {
-    padding-right: 390px;
-  }
-}
-
-/* Tekst indhold */
-.grid_column1 {
-  display: grid;
-  grid-column: 2;
-}
-.p_space {
-  padding-top: 3%;
-}
-
-@media (min-width: 800px) {
-  .p_padding {
-    padding-right: 225px;
-  }
-}
-
 /****************** Footer *******************/
+/* første række */
 .flex {
   display: flex;
   flex-direction: row;
@@ -567,13 +572,14 @@ nav {
   padding: 3% 0% 6% 0%;
   color: #e9e5e0;
 }
+
 .footer_logo {
   display: flex;
   justify-content: center;
   padding-bottom: 3%;
 }
 
-/* footer, mobile version */
+/* footer, padding, mobile version */
 @media (max-width: 800px) {
   footer {
     padding: 5%;
