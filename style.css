@@ -10,7 +10,7 @@ img {
 }
 /* padding sider */
 main {
-  margin: 0 10px;
+  margin: 0 10%;
 }
 
 /* Baggrundsfarver */
@@ -145,7 +145,7 @@ li:hover {
 /* hyperlink styling */
 a {
   font-family: "Raleway", sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 400;
   color: #050604;
   text-decoration: none;
@@ -175,7 +175,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
+  padding: 2% 4% 0 3%;
   background-color: #e9e5e0;
 }
 
@@ -382,6 +382,7 @@ nav {
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-bottom: 5%;
   }
   .om_txt {
     display: grid;
@@ -561,6 +562,7 @@ nav {
 /* crosslinkis*/
 .genveje {
   font-size: 10px;
+  padding-top: 3%;
 }
 
 /****************** Footer *******************/
