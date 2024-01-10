@@ -28,6 +28,7 @@ footer {
   font-family: "Margaret";
   src: url("webfontkit-20240107-102758/margaret-webfont.woff2") format("woff2");
   src: url("webfontkit-20240107-102758/margaret-webfont.woff") format("woff");
+  font-display: swap;
 }
 h1 {
   font-family: "Margaret";
